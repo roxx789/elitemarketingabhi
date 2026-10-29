@@ -1,161 +1,324 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marathi Trader Abhi - Official Telegram Channel</title>
 
-<title>Trading Community</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#070C18',
+                        cardDark: '#0F172A',
+                        cardBorder: '#1E293B',
+                        accentBlue: '#0099FF',
+                        accentBlueHover: '#0088EE',
+                        brandGold: '#F59E0B',
+                        brandGoldDark: '#D97706',
+                        statCardBg: '#131D33',
+                        pillBg: '#131D31'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
 
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}
-(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-fbq('init', '2027397264819185');
-fbq('track', 'PageView');
-fbq('track', 'ViewContent');
-</script>
+    <!-- Meta Pixel Code -->
+    <script>
+        const META_PIXEL_ID = '1119932130767668';
 
-<style>
-body{
-margin:0;
-font-family:Arial;
-text-align:center;
-color:white;
-background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-}
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        
+        if(META_PIXEL_ID && META_PIXEL_ID !== 'YOUR_PIXEL_ID') {
+            fbq('init', META_PIXEL_ID);
+            fbq('track', 'PageView');
+        } else {
+            console.log('[Meta Pixel Debug] PageView tracked.');
+        }
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1119932130767668&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Meta Pixel Code -->
 
-/* TOP BAR */
-.topbar{
-background:#ffd700;
-color:#000;
-padding:12px;
-font-weight:900;
-font-size:17px;
-}
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #060913;
+            color: #F8FAFC;
+        }
 
-/* PROFILE */
-.profile{
-margin-top:25px;
-}
-.profile img{
-width:130px;
-height:130px;
-border-radius:50%;
-border:5px solid #ffd700;
-}
+        .btn-glow {
+            box-shadow: 0 0 25px rgba(0, 153, 255, 0.4);
+        }
 
-/* TEXT */
-.title{
-font-size:24px;
-font-weight:900;
-margin-top:10px;
-color:#ffd700;
-}
-.subtitle{
-font-size:16px;
-font-weight:700;
-}
-.counter{
-margin-top:8px;
-font-weight:700;
-}
+        .btn-glow:hover {
+            box-shadow: 0 0 35px rgba(0, 153, 255, 0.6);
+        }
 
-/* BOX */
-.box{
-background:rgba(0,0,0,0.4);
-margin:12px 20px;
-padding:12px;
-border-radius:10px;
-font-weight:700;
-}
+        /* Dashed border custom styling */
+        .dashed-box {
+            border: 2px dashed #F59E0B;
+        }
 
-/* BUTTON */
-.join-btn{
-background:#ffd700;
-color:#000;
-padding:16px;
-margin:20px;
-border-radius:12px;
-font-size:18px;
-font-weight:900;
-cursor:pointer;
-animation:pulse 1.5s infinite;
-}
-
-@keyframes pulse{
-0%{transform:scale(1)}
-50%{transform:scale(1.05)}
-100%{transform:scale(1)}
-}
-
-/* ADS */
-.ads{
-margin:20px 0;
-}
-.ads a{
-background:black;
-color:#ffd700;
-padding:10px 18px;
-border-radius:20px;
-text-decoration:none;
-font-size:13px;
-}
-
-/* DISCLAIMER */
-.disclaimer{
-background:#000;
-color:#ccc;
-font-size:12px;
-padding:14px;
-line-height:1.6;
-}
-</style>
+        .progress-bar-fill {
+            transition: width 1.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
 </head>
+<body class="min-h-screen flex flex-col justify-center items-center p-3 sm:p-4 md:p-6 antialiased selection:bg-amber-500 selection:text-black">
 
-<body>
+    <!-- Main Container Card -->
+    <main class="w-full max-w-[440px] mx-auto my-auto">
+        <div class="bg-cardDark border border-cardBorder/90 rounded-3xl p-5 sm:p-6 md:p-7 shadow-2xl relative overflow-hidden text-center">
+            
+            <!-- Logo Section -->
+            <div class="flex justify-center mb-5">
+                <div class="w-28 h-28 bg-white rounded-xl p-3 flex flex-col items-center justify-center shadow-lg border border-gray-100">
+                    <svg class="w-10 h-10 text-emerald-600 mb-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 3v18h18"/>
+                        <path d="m19 9-5 5-4-4-3 3"/>
+                    </svg>
+                    <div class="text-xs font-black tracking-tight text-gray-900 leading-none uppercase">Marathi</div>
+                    <div class="text-[11px] font-bold tracking-wider text-emerald-600 leading-none uppercase mt-0.5">Trader Abhi</div>
+                </div>
+            </div>
 
-<div class="profile">
-<img src="profile.jpg" alt="Profile">
-</div>
+            <!-- Main Heading / Brand Name -->
+            <h1 class="text-2xl sm:text-3xl font-extrabold text-brandGold tracking-tight mb-2">
+                Marathi Trader Abhi
+            </h1>
 
-<div class="title">Trade With Mohit Agrawal</div>
-<div class="subtitle">Market Insights & Learning</div>
-<div class="counter">👥 2,300+ traders joined today</div>
+            <!-- Channel Subtitle Tagline -->
+            <div class="flex items-center justify-center space-x-1 mb-3">
+                <span class="text-base sm:text-lg">🏆</span>
+                <p class="text-white font-bold text-sm sm:text-base tracking-wide">
+                    India's Premier Stock Market Channel
+                </p>
+            </div>
 
-<div class="box">📊 Market Analysis & Learning</div>
-<div class="box">📈 Intraday & Options Discussion</div>
-<div class="box">📚 14+ Years Market Experience</div>
+            <!-- Star Ratings & Reviews -->
+            <div class="flex flex-col items-center justify-center space-y-1 mb-6">
+                <div class="flex space-x-1 text-brandGold text-base sm:text-lg">
+                    ★ ★ ★ ★ ★
+                </div>
+                <p class="text-xs sm:text-sm text-gray-400 font-semibold tracking-wide">
+                    4.9/5 <span class="text-gray-400 font-normal">(2,340 Reviews)</span>
+                </p>
+            </div>
 
-<div class="join-btn" id="joinBtn">JOIN TELEGRAM CHANNEL</div>
+            <!-- Primary CTA Button -->
+            <div class="mb-6">
+                <button id="ctaButton" onclick="handleTelegramClick()" 
+                        class="relative w-full bg-accentBlue hover:bg-accentBlueHover text-white font-extrabold py-3.5 sm:py-4 px-6 rounded-2xl transition-all duration-300 transform active:scale-[0.98] text-center text-base sm:text-lg overflow-hidden flex items-center justify-center btn-glow cursor-pointer tracking-wide">
+                    <div id="progressBar" class="absolute left-0 top-0 bottom-0 bg-blue-700/60 w-0 progress-bar-fill"></div>
+                    <span id="btnText" class="relative z-10 flex items-center justify-center gap-2">
+                        Join Free Telegram Channel <span class="text-xl">→</span>
+                    </span>
+                </button>
+            </div>
 
-<div class="ads">
-<a href="https://t.me/+GZeKfXdd9lIxZTJl">Advertised by elitemarketing.tech</a>
-</div>
+            <!-- 3 Stat Cards Grid -->
+            <div class="grid grid-cols-3 gap-2 sm:gap-3 mb-6">
+                <div class="bg-statCardBg border border-cardBorder/60 rounded-xl p-3 text-center">
+                    <div class="text-brandGold font-extrabold text-base sm:text-lg leading-tight">50K+</div>
+                    <div class="text-gray-400 text-[11px] sm:text-xs font-medium mt-0.5">Members</div>
+                </div>
+                <div class="bg-statCardBg border border-cardBorder/60 rounded-xl p-3 text-center">
+                    <div class="text-brandGold font-extrabold text-base sm:text-lg leading-tight">5+</div>
+                    <div class="text-gray-400 text-[11px] sm:text-xs font-medium mt-0.5">Years</div>
+                </div>
+                <div class="bg-statCardBg border border-cardBorder/60 rounded-xl p-3 text-center">
+                    <div class="text-brandGold font-extrabold text-base sm:text-lg leading-tight">95%</div>
+                    <div class="text-gray-400 text-[11px] sm:text-xs font-medium mt-0.5">Accuracy</div>
+                </div>
+            </div>
 
-<script>
-const tgLink="https://t.me/+FbqZCLER6y4zYTBl";
+            <!-- Urgency & Scarcity Section -->
+            <div class="mb-6">
+                <div class="flex items-center justify-center gap-1.5 text-brandGold font-bold text-xs sm:text-sm uppercase tracking-wide mb-2.5">
+                    <span>🔥</span> Limited FREE Access Available
+                </div>
+                <div class="dashed-box rounded-xl p-3 sm:p-3.5 bg-brandGold/5 text-center">
+                    <div class="flex items-center justify-center gap-1.5 text-brandGold font-bold text-xs sm:text-sm tracking-wider">
+                        <span>⚡</span> LINK WILL EXPIRE IN
+                    </div>
+                    <div id="timerDisplay" class="text-brandGold font-black text-xl sm:text-2xl mt-0.5 tracking-widest">
+                        05 SEC
+                    </div>
+                </div>
+            </div>
 
-document.getElementById("joinBtn").addEventListener("click",function(){
-fbq('track','Lead',{ value:10, currency:'INR' });
-window.location.href = tgLink;
-});
-</script>
+            <!-- Value / Feature Pills Stack -->
+            <div class="space-y-2.5 mb-6 text-left">
+                <div class="bg-pillBg border border-cardBorder/70 rounded-xl p-3 sm:p-3.5 flex items-center space-x-3 text-gray-200 text-xs sm:text-sm font-medium">
+                    <span class="text-base sm:text-lg">📊</span>
+                    <span>Daily Nifty & BankNifty Levels</span>
+                </div>
+                <div class="bg-pillBg border border-cardBorder/70 rounded-xl p-3 sm:p-3.5 flex items-center space-x-3 text-gray-200 text-xs sm:text-sm font-medium">
+                    <span class="text-base sm:text-lg">🎓</span>
+                    <span>Educational Market Analysis</span>
+                </div>
+                <div class="bg-pillBg border border-cardBorder/70 rounded-xl p-3 sm:p-3.5 flex items-center space-x-3 text-gray-200 text-xs sm:text-sm font-medium">
+                    <span class="text-base sm:text-lg">👥</span>
+                    <span>50,000+ Subscribers Community</span>
+                </div>
+            </div>
 
-<div class="disclaimer">
-<strong>Disclaimer:</strong><br>
-This community is for educational and informational purposes only.
-We do not provide financial or investment advice.
-Trading in financial markets involves risk.
-Always consult a qualified financial advisor before making any investment decisions.
-</div>
+            <!-- Anti-Fake Duplicate Click Tracking Log -->
+            <div id="trackingNotice" class="hidden mb-5 p-2.5 rounded-xl bg-bgDark border border-cardBorder text-[11px] text-gray-400 text-center">
+                <span class="text-emerald-400 font-semibold">Verification:</span> Repeat session. Meta event duplicate lead suppressed.
+            </div>
 
+            <!-- Disclaimer Paragraph -->
+            <p class="text-[10px] sm:text-[11px] text-gray-400 leading-relaxed text-center mb-6 px-1">
+                Disclaimer: This channel is for educational purposes only. Trading involves market risk. Please consult your financial advisor before making investment decisions.
+            </p>
+
+            <!-- Managed By Credit Badge -->
+            <div class="flex justify-center">
+                <div class="bg-pillBg border border-cardBorder/80 text-gray-300 text-[10px] sm:text-[11px] font-extrabold tracking-widest uppercase px-4 py-2 rounded-xl">
+                    AD MANAGED BY NETAD EXPERT
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Meta Compliance Footer Links & Disclaimers -->
+        <footer class="mt-5 text-center space-y-3">
+            <div class="flex justify-center space-x-4 text-xs text-gray-400 font-medium">
+                <button onclick="openModal('privacyModal')" class="hover:text-brandGold underline transition">Privacy Policy</button>
+                <span>&middot;</span>
+                <button onclick="openModal('termsModal')" class="hover:text-brandGold underline transition">Terms & Conditions</button>
+                <span>&middot;</span>
+                <button onclick="openModal('disclaimerModal')" class="hover:text-brandGold underline transition">Risk Disclaimer</button>
+            </div>
+
+            <p class="text-[10px] text-gray-600 max-w-xs mx-auto">
+                This site is not a part of the Meta/Facebook website or Meta Inc. Additionally, this site is NOT endorsed by Meta in any way.
+            </p>
+        </footer>
+    </main>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacyModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-cardDark border border-cardBorder rounded-2xl p-6 max-w-lg w-full max-h-[80vh] overflow-y-auto relative text-sm text-gray-300">
+            <button onclick="closeModal('privacyModal')" class="absolute top-4 right-4 text-gray-400 hover:text-white font-bold text-xl">&times;</button>
+            <h3 class="text-lg font-bold text-white mb-4">Privacy Policy</h3>
+            <p class="mb-3">We respect your privacy. This website does not collect personally identifiable information directly on this landing page except through standard web analytics and Meta Pixel tracking used to measure advertising efficiency.</p>
+            <p class="mb-3">When clicking through to Telegram, you interact directly with Telegram's application subject to Telegram's Privacy Policy.</p>
+            <p class="mb-3">Cookies and local browser storage are utilized solely to eliminate duplicate event firing on Meta Ads Manager.</p>
+            <button onclick="closeModal('privacyModal')" class="mt-4 w-full py-2 bg-cardBorder text-white rounded-xl font-semibold">Close</button>
+        </div>
+    </div>
+
+    <!-- Terms & Conditions Modal -->
+    <div id="termsModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-cardDark border border-cardBorder rounded-2xl p-6 max-w-lg w-full max-h-[80vh] overflow-y-auto relative text-sm text-gray-300">
+            <button onclick="closeModal('termsModal')" class="absolute top-4 right-4 text-gray-400 hover:text-white font-bold text-xl">&times;</button>
+            <h3 class="text-lg font-bold text-white mb-4">Terms & Conditions</h3>
+            <p class="mb-3"><strong>1. Educational Content Only:</strong> All content shared on the channel is purely for educational, analytical, and informational purposes. Nothing constitutes SEBI-registered investment advice.</p>
+            <p class="mb-3"><strong>2. No Profit Claims:</strong> We do not promise fixed profits or guaranteed returns. Stock and options trading carries market risk.</p>
+            <p class="mb-3"><strong>3. User Responsibility:</strong> Any decisions made based on shared market analysis are at your own personal risk Personal risk.</p>
+            <button onclick="closeModal('termsModal')" class="mt-4 w-full py-2 bg-cardBorder text-white rounded-xl font-semibold">Close</button>
+        </div>
+    </div>
+
+    <!-- Risk Disclaimer Modal -->
+    <div id="disclaimerModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-cardDark border border-cardBorder rounded-2xl p-6 max-w-lg w-full max-h-[80vh] overflow-y-auto relative text-sm text-gray-300">
+            <button onclick="closeModal('disclaimerModal')" class="absolute top-4 right-4 text-gray-400 hover:text-white font-bold text-xl">&times;</button>
+            <h3 class="text-lg font-bold text-white mb-4">Financial Risk Disclaimer</h3>
+            <p class="mb-3">Trading in Securities, Derivatives, and Forex contains high inherent financial risk. You may lose part or all of your invested capital.</p>
+            <p class="mb-3">This page and linked channel do not guarantee outcomes or profits. Always consult a certified financial advisor before trading.</p>
+            <button onclick="closeModal('disclaimerModal')" class="mt-4 w-full py-2 bg-cardBorder text-white rounded-xl font-semibold">Close</button>
+        </div>
+    </div>
+
+    <!-- Deduplication Engine & Timer Script -->
+    <script>
+        const TELEGRAM_LINK = 'https://t.me/+fqax5hRizExmMDA9'; 
+        const CONVERSION_TRACKED_KEY = 'meta_lead_tracked_marathi_abhi';
+
+        // Dynamic Countdown Timer
+        let countdownSeconds = 5;
+        const timerDisplay = document.getElementById('timerDisplay');
+
+        const timerInterval = setInterval(() => {
+            if (countdownSeconds > 1) {
+                countdownSeconds--;
+                timerDisplay.innerText = `0${countdownSeconds} SEC`;
+            } else {
+                timerDisplay.innerText = '00 SEC';
+                clearInterval(timerInterval);
+            }
+        }, 1000);
+
+        window.onload = function() {
+            if (localStorage.getItem(CONVERSION_TRACKED_KEY)) {
+                const notice = document.getElementById('trackingNotice');
+                if (notice) notice.classList.remove('hidden');
+            }
+        };
+
+        function handleTelegramClick() {
+            const btnText = document.getElementById('btnText');
+            const ctaButton = document.getElementById('ctaButton');
+            const progressBar = document.getElementById('progressBar');
+            
+            if (ctaButton.getAttribute('data-loading') === 'true') return;
+            ctaButton.setAttribute('data-loading', 'true');
+
+            btnText.innerHTML = 'Connecting to Telegram...';
+            progressBar.style.width = '100%';
+
+            const alreadyTracked = localStorage.getItem(CONVERSION_TRACKED_KEY);
+
+            if (!alreadyTracked) {
+                if (typeof fbq === 'function') {
+                    fbq('track', 'Lead', {
+                        content_name: 'Marathi Trader Abhi Telegram Join',
+                        event_source_url: window.location.href
+                    });
+                    console.log('[Meta Pixel Engine] Unique Lead Event Triggered.');
+                }
+                localStorage.setItem(CONVERSION_TRACKED_KEY, new Date().toISOString());
+            } else {
+                console.log('[Meta Pixel Engine] Duplicate click detected. Meta event bypassed.');
+            }
+
+            setTimeout(() => {
+                window.location.href = TELEGRAM_LINK;
+            }, 1800);
+        }
+
+        function openModal(id) {
+            document.getElementById(id).classList.remove('hidden');
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.add('hidden');
+        }
+    </script>
 </body>
 </html>
